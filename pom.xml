@@ -43,7 +43,7 @@
 	    <uniqueVersion>false</uniqueVersion>
 		<id>studi-scratch</id>
 		<name>studi-scratch</name>
-			<url>http://localhost:8081/#admin/repository/repositories:studi-scratch</url>
+			<url>http://localhost:8081/repository/studi-scratch/</url>
 	</repository>
 	</distributionManagement>
 
