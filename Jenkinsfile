@@ -5,7 +5,7 @@ pipeline {
         mavenhome = tool 'jenkins-mvn'
         imageName = "cicddemo"
         registryCredentials = "nexus"
-        registry = "localhost:8080/"
+        registry = "localhost:8081/"
         dockerImage = ""
     }
 
