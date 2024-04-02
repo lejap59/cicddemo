@@ -38,7 +38,7 @@ pipeline {
             steps {
                 script {
                     withDockerRegistry([credentialsId: registryCredentials, url: ""]) {
-                        dockerImage.push()
+                        dockerImage.push("lejap59/cicddemo:latest")
                     }
                 }
             }
