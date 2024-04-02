@@ -3,7 +3,7 @@ pipeline {
     
     environment {
         mavenhome = tool 'jenkins-mvn'
-        imageName = "cicddemo"
+        imageName = "lejap59/cicddemo:latest"
         registryCredentials = "docker hub"
         registry = ""
         dockerImage = ""
@@ -38,7 +38,7 @@ pipeline {
             steps {
                 script {
                     withDockerRegistry([credentialsId: registryCredentials, url: ""]) {
-                        dockerImage.push("lejap59/cicddemo:latest")
+                        dockerImage.push()
                     }
                 }
             }
