@@ -4,8 +4,8 @@ pipeline {
     environment {
         mavenhome = tool 'jenkins-mvn'
         imageName = "cicddemo"
-        registryCredentials = "dockerhubcred"
-        registry = ""
+        registryCredentials = "nexus"
+        registry = "localhost:8083/"
         dockerImage = ""
     }
 
@@ -37,8 +37,8 @@ pipeline {
         stage('Deploy') {
             steps {
                 script {
-                    withDockerRegistry([credentialsId: registryCredentials, url: ""]) {
-                        dockerImage.push()
+                    docker.withRegistry("http://" + registry, registryCredentials) {
+                        dockerImage.push('latest')
                     }
                 }
             }
