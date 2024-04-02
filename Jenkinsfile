@@ -4,7 +4,7 @@ pipeline {
     environment {
         mavenhome = tool 'jenkins-mvn'
         imageName = "cicddemo"
-        registryCredentials = "dockerhub"
+        registryCredentials = "docker hub"
         registry = ""
         dockerImage = ""
     }
