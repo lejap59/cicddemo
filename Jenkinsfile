@@ -31,13 +31,12 @@ pipeline {
                 script {
                     dockerImage = docker.build imageName
                 }
-                pt  "mvn test"
             }
         }    
         
         stage('Deploy') {
             steps {
-                echo " "deploy image docker""
+                echo "deploy image docker"
             }
         }
     }
